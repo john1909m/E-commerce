@@ -19,7 +19,7 @@ nav{
     background-color: rgba(0, 0, 0, 0.5);
     display: flex;
     align-items: center;
-    z-index: 7;
+    z-index: 2000;
     transition: 1s;
 }
 nav:hover{
