@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head id="headd">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loading...</title>
+    <!-- <link rel="stylesheet" href="dark_loading.css"> -->
+    <link rel="stylesheet" href="loading.css">
+    <link rel="icon" href="assets/icon_tab.ico" type="image/x-icon">
+
+</head>
+<body>
+    <div class="loader"></div>
+
+
+    <script>
+        if(localStorage.getItem("darkMode")=="darked"){
+    document.getElementById("headd").innerHTML=`<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loading...</title>
+    <link rel="stylesheet" href="dark_loading.css">
+    <!-- <link rel="stylesheet" href="loading.css">-->` 
+}
+else{
+    document.getElementById("headd").innerHTML=`<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loading...</title>
+    <!-- <link rel="stylesheet" href="dark_loading.css"> -->
+    <link rel="stylesheet" href="loading.css">`
+
+}
+        setTimeout(()=>{
+            window.location.href=localStorage.getItem("navigate")
+        },2000)
+    </script>
+</body>
+</html>

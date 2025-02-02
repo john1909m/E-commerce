@@ -1,0 +1,54 @@
+@media screen and (max-width:1180px) {
+    .about-container{
+        width: 90vw;
+    }
+}
+@media screen and (max-width:1050px) {
+    .about-container{
+        width: 100vw;
+    }
+}
+@media screen and (max-width:840px) {
+    .about-container{
+        height: 80vh;
+    }
+    .about-body-all{
+        width: 70%;
+    }
+
+
+}
+
+
+
+@media screen and (max-width:580px) {
+    .about-container{
+        height: 70vh;
+    }
+    .about-body-all{
+        width: 85%;
+        height: 60%;
+    }
+    .about-overlay h1{
+        font-size: 60px;
+    }
+
+}
+
+
+@media screen and (max-width:450px) {
+    .about-container{
+        height: 50vh;
+    }
+    .about-body-all{
+        width: 85%;
+        height: 40%;
+    }
+    .about-overlay h1{
+        font-size: 45px;
+    }
+    .about-body{
+        font-size: 16px;
+    }
+
+}

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head id="headd">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="stylesheet" href="Home.css">
+    <!-- <link rel="stylesheet" href="dark_Home.css"> -->
+    <link rel="stylesheet" href="Profile.css">
+    <!-- <link rel="stylesheet" href="dark-profile.css"> -->
+    <link rel="stylesheet" href="responsive_Home.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="nav-img">
+                <img id="logo" src="assets/Logo.png" alt="">
+            </div>
+            <div class="nav-links">
+                <div class="nav-links-primary">
+                    <ul>
+                        <li id="homePage">Home</li>
+                        <li id="productsPage">Produtcs</li>
+                        <li id="aboutPage">About</li>
+                        <li id="contactUsPage">Contact Us</li>
+                    </ul>
+                </div>
+                <div class="nav-menu">
+                    <button class="nav-menu-btn" id="nav-menu-btn">≡</button>
+                    <div class="nav-links-secondary">
+                        <ul>
+                            <li id="homePage-menu">Home</li>
+                            <li id="productsPage-menu">Produtcs</li>
+                            <li id="aboutPage-menu">About</li>
+                            <li id="contactUsPage-menu">Contact Us</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="nav-icons">
+                <div class="nav-icon">
+                    <img src="assets/search.png" alt="">
+                </div>
+                <div class="nav-icon">
+                    <img src="assets/heart.png" alt="">
+                </div>
+                <div class="nav-icon">
+                    <img src="assets/cart.png" alt="">
+                </div>
+                <button class="register primaryBtn" id="register">Register</button>
+                <button class="login secondaryBtn" id="login">Login</button>
+                <div class="account" id="account">
+                    <p id="accountTitle"> </p>
+                </div>
+                <button class="logout secondaryBtn" id="logout">Logout</button>
+
+            </div>
+        </nav>
+        </header>
+<div class="space-2"></div>
+        <div class="cover-photo">
+            <img src="assets/cover-2.jpg" alt="">
+            <div class="profile-pic">
+                <img src="assets/profile.jpg" alt="">
+            </div>
+        </div>
+        <!-- <div class="space-2"></div> -->
+        <div class="space-4"></div>
+<div class="profile-container">
+        <div class="user-info">
+            <h3 id="profile-name">Name</h3>
+            <p id="profile-email-const">E-mail: </p>
+        </div>
+        <div class="user-edit-info">
+            <input type="text" name="" id="profile-first-name" placeholder="first name">
+            <input type="text" name="" id="profile-last-name" placeholder="last name">
+            <input type="email" name="" id="profile-email" placeholder="Email">
+            <input type="password" name="" id="profile-pass" placeholder="Password">
+            <input type="password" name="" id="profile-repass" placeholder="Confirm password">
+            <button id="edit-info-btn" class="edit-info-btn primaryBtn" >Edit info ✏️</button>
+            <button id="save-info-btn" class="save-info-btn secondaryBtn display" >Save</button>
+        </div>
+    </div>
+
+    <button class="darkBtn" id="darkBtn">🌙</button>
+    <button class="lightBtn" id="lightBtn">☀️</button>
+    <script src="Profile.js"></script>
+</body>
+</html>

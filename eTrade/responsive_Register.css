@@ -1,0 +1,39 @@
+@media screen and (max-width:1080px) {
+    .container-body{
+        width: 55%;
+    }
+    .register-form{
+        width: 90%;
+
+    }
+
+}
+
+
+
+
+
+
+
+@media screen and (max-width:820px) {
+    .container-body{
+        width: 70%;
+    }
+}
+
+
+
+
+
+
+
+
+@media screen and (max-width:500px) {
+    .container-body{
+        width: 85%;
+    }
+    .register-form{
+        width: 100%;
+
+    }
+}
