@@ -32,6 +32,7 @@ if(localStorage.getItem("darkMode")=="darked"){
     <link rel="stylesheet" href="dark_Home.css">
     <!-- <link rel="stylesheet" href="Profile.css"> -->
     <link rel="stylesheet" href="dark-profile.css">
+     <link rel="stylesheet" href="responsive_Profile.css">
     <link rel="stylesheet" href="responsive_Home.css">`
     logo.setAttribute("src","assets/LogoDark.png")
 }
@@ -43,6 +44,7 @@ else{
     <!-- <link rel="stylesheet" href="dark_Home.css"> -->
     <link rel="stylesheet" href="Profile.css">
     <!-- <link rel="stylesheet" href="dark-profile.css"> -->
+     <link rel="stylesheet" href="responsive_Profile.css">
     <link rel="stylesheet" href="responsive_Home.css">`
     logo.setAttribute("src","assets/Logo.png")
 
@@ -55,6 +57,7 @@ darkBtn.addEventListener("click",()=>{
     <link rel="stylesheet" href="dark_Home.css">
     <!-- <link rel="stylesheet" href="Profile.css"> -->
     <link rel="stylesheet" href="dark-profile.css">
+     <link rel="stylesheet" href="responsive_Profile.css">
     <link rel="stylesheet" href="responsive_Home.css">`
     logo.setAttribute("src","assets/LogoDark.png")
     localStorage.setItem("darkMode","darked")
@@ -67,6 +70,7 @@ lightBtn.addEventListener("click",()=>{
     <!-- <link rel="stylesheet" href="dark_Home.css"> -->
     <link rel="stylesheet" href="Profile.css">
     <!-- <link rel="stylesheet" href="dark-profile.css"> -->
+     <link rel="stylesheet" href="responsive_Profile.css">
     <link rel="stylesheet" href="responsive_Home.css">`
     localStorage.setItem("darkMode","light")
     logo.setAttribute("src","assets/Logo.png")

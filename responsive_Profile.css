@@ -1,0 +1,39 @@
+/* @media screen and (max-width:1210px) {
+    .profile-pic{
+        width: 20%;
+    }
+}
+@media screen and (max-width:770px) {
+    .profile-pic{
+        width: 25%;
+    }
+} */
+
+@media screen and (max-width:770px) {
+    .profile-pic{
+        width: 150px;
+        height: 150px;
+        bottom: -40%;
+    }
+} 
+
+@media screen and (max-width:602px) {
+    .profile-pic{
+        /* width: 150px; */
+        /* height: 150px; */
+        bottom: -20%;
+        left: 30%;
+    }
+   .profile-container{
+    flex-direction: column;
+    align-items: center;
+
+   }
+   .user-info{
+    height: 25vh;
+   }
+   .user-edit-info{
+    width: 60%;
+   }
+
+} 
