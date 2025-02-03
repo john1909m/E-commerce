@@ -187,9 +187,9 @@ function displayAllData(){
 
     for (let i = 0; i < allProducts.length; i++) {
         x+=`<div class="product-page-card">
-                <div class="product-page-card-img">
-                   <a href="https://e-trades.netlify.app/singleProduct.html?id=${allProducts[i].id}"> <img src="${allProducts[i].thumbnail}" alt=""></a>
-                </div>
+                <a href="https://e-trades.netlify.app/singleProduct.html?id=${allProducts[i].id}"><div class="product-page-card-img">
+                    <img src="${allProducts[i].thumbnail}" alt="">
+                </div></a>
                 <div class="product-page-card-title">
                     <h3>${allProducts[i].title}</h3>
                 </div>
