@@ -141,7 +141,7 @@
 }
 .filter-menu-btn:hover + .filter-menu{
     opacity: 1;
-    /* visibility: visible; */
+    visibility: visible;
 }
 .filter-menu{
     background-color: rgba(211, 211, 211, 0.453);
@@ -151,7 +151,7 @@
     display: flex;
     opacity: 0;
     backdrop-filter: blur(15px);
-    /* visibility: hidden; */
+    visibility: hidden;
     justify-content: center;
     align-items: center;
     transition: 0.2s;
