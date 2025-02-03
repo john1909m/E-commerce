@@ -15,7 +15,7 @@ loginBtn.addEventListener("click",function(e){
             if(allUsers[i].password==password.value){
                 localStorage.setItem("logedIn","loged_in")
                 localStorage.setItem("userLog",JSON.stringify(email.value))
-                navigate="https://john1909m.github.io/E-commerce/"
+                navigate="https://e-trades.netlify.app/"
                 localStorage.setItem("navigate",navigate)
                 e.preventDefault();  
                 window.location.href="loading.html"

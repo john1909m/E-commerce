@@ -81,7 +81,7 @@ productsPage.addEventListener("click",function(e){
 
 })
 homePage.addEventListener("click",function(e){
-    navigate="https://john1909m.github.io/E-commerce/"
+    navigate="https://e-trades.netlify.app/"
     localStorage.setItem("navigate",navigate)
     e.preventDefault();  
     window.location.href="loading.html"
@@ -104,7 +104,7 @@ productsPageMenu.addEventListener("click",function(e){
 
 })
 homePageMenu.addEventListener("click",function(e){
-    navigate="https://john1909m.github.io/E-commerce/"
+    navigate="https://e-trades.netlify.app/"
     localStorage.setItem("navigate",navigate)
     e.preventDefault();  
     window.location.href="loading.html"
@@ -189,7 +189,7 @@ document.getElementById("logout-menu").addEventListener("click",()=>{
 
 })
 logo.addEventListener("click",function(e){
-    navigate="https://john1909m.github.io/E-commerce/"
+    navigate="https://e-trades.netlify.app/"
     localStorage.setItem("navigate",navigate)
     e.preventDefault();  
     window.location.href="loading.html"

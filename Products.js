@@ -188,7 +188,7 @@ function displayAllData(){
     for (let i = 0; i < allProducts.length; i++) {
         x+=`<div class="product-page-card">
                 <div class="product-page-card-img">
-                   <a href="https://john1909m.github.io/E-commerce/singleProduct.html?id=${allProducts[i].id}"> <img src="${allProducts[i].thumbnail}" alt=""></a>
+                   <a href="https://e-trades.netlify.app/singleProduct.html?id=${allProducts[i].id}"> <img src="${allProducts[i].thumbnail}" alt=""></a>
                 </div>
                 <div class="product-page-card-title">
                     <h3>${allProducts[i].title}</h3>
@@ -217,7 +217,7 @@ function displayPhonesData(){
     for (let i = 0; i < allPhones.length; i++) {
         x+=`<div class="product-page-card">
                 <div class="product-page-card-img">
-                   <a href="https://john1909m.github.io/E-commerce/singleProduct.html?id=${allPhones[i].id}"> <img src="${allPhones[i].thumbnail}" alt=""></a>
+                   <a href="https://e-trades.netlify.app/singleProduct.html?id=${allPhones[i].id}"> <img src="${allPhones[i].thumbnail}" alt=""></a>
                 </div>
                 <div class="product-page-card-title">
                     <h3>${allPhones[i].title}</h3>
@@ -246,7 +246,7 @@ function displayLaptopsData(){
     for (let i = 0; i < allLaptops.length; i++) {
         x+=`<div class="product-page-card">
                 <div class="product-page-card-img">
-                   <a href="https://john1909m.github.io/E-commerce/singleProduct.html?id=${allLaptops[i].id}"> <img src="${allLaptops[i].thumbnail}" alt=""></a>
+                   <a href="https://e-trades.netlify.app/singleProduct.html?id=${allLaptops[i].id}"> <img src="${allLaptops[i].thumbnail}" alt=""></a>
                 </div>
                 <div class="product-page-card-title">
                     <h3>${allLaptops[i].title}</h3>
@@ -274,7 +274,7 @@ function displayWatchesData(){
     for (let i = 0; i < allWatches.length; i++) {
         x+=`<div class="product-page-card">
                 <div class="product-page-card-img">
-                   <a href="https://john1909m.github.io/E-commerce/singleProduct.html?id=${allWatches[i].id}"> <img src="${allWatches[i].thumbnail}" alt=""></a>
+                   <a href="https://e-trades.netlify.app/singleProduct.html?id=${allWatches[i].id}"> <img src="${allWatches[i].thumbnail}" alt=""></a>
                 </div>
                 <div class="product-page-card-title">
                     <h3>${allWatches[i].title}</h3>
@@ -302,7 +302,7 @@ function displayClothesData(){
     for (let i = 0; i < allClothes.length; i++) {
         x+=`<div class="product-page-card">
                 <div class="product-page-card-img">
-                   <a href="https://john1909m.github.io/E-commerce/singleProduct.html?id=${allClothes[i].id}"> <img src="${allClothes[i].thumbnail}" alt=""></a>
+                   <a href="https://e-trades.netlify.app/singleProduct.html?id=${allClothes[i].id}"> <img src="${allClothes[i].thumbnail}" alt=""></a>
                 </div>
                 <div class="product-page-card-title">
                     <h3>${allClothes[i].title}</h3>
@@ -330,7 +330,7 @@ function displayShoesData(){
     for (let i = 0; i < allShoes.length; i++) {
         x+=`<div class="product-page-card">
                 <div class="product-page-card-img">
-                   <a href="https://john1909m.github.io/E-commerce/singleProduct.html?id=${allShoes[i].id}"> <img src="${allShoes[i].thumbnail}" alt=""></a>
+                   <a href="https://e-trades.netlify.app/singleProduct.html?id=${allShoes[i].id}"> <img src="${allShoes[i].thumbnail}" alt=""></a>
                 </div>
                 <div class="product-page-card-title">
                     <h3>${allShoes[i].title}</h3>
@@ -358,7 +358,7 @@ function displayFurnitureData(){
     for (let i = 0; i < allFurniture.length; i++) {
         x+=`<div class="product-page-card">
                 <div class="product-page-card-img">
-                   <a href="https://john1909m.github.io/E-commerce/singleProduct.html?id=${allFurniture[i].id}"> <img src="${allFurniture[i].thumbnail}" alt=""></a>
+                   <a href="https://e-trades.netlify.app/singleProduct.html?id=${allFurniture[i].id}"> <img src="${allFurniture[i].thumbnail}" alt=""></a>
                 </div>
                 <div class="product-page-card-title">
                     <h3>${allFurniture[i].title}</h3>
@@ -386,7 +386,7 @@ function displayAccessoriesData(){
     for (let i = 0; i < allAccessories.length; i++) {
         x+=`<div class="product-page-card">
                 <div class="product-page-card-img">
-                   <a href="https://john1909m.github.io/E-commerce/singleProduct.html?id=${allAccessories[i].id}"> <img src="${allAccessories[i].thumbnail}" alt=""></a>
+                   <a href="https://e-trades.netlify.app/singleProduct.html?id=${allAccessories[i].id}"> <img src="${allAccessories[i].thumbnail}" alt=""></a>
                 </div>
                 <div class="product-page-card-title">
                     <h3>${allAccessories[i].title}</h3>
@@ -414,7 +414,7 @@ function displayBeautyData(){
     for (let i = 0; i < allBeauty.length; i++) {
         x+=`<div class="product-page-card">
                 <div class="product-page-card-img">
-                   <a href="https://john1909m.github.io/E-commerce/singleProduct.html?id=${allBeauty[i].id}"> <img src="${allBeauty[i].thumbnail}" alt=""></a>
+                   <a href="https://e-trades.netlify.app/singleProduct.html?id=${allBeauty[i].id}"> <img src="${allBeauty[i].thumbnail}" alt=""></a>
                 </div>
                 <div class="product-page-card-title">
                     <h3>${allBeauty[i].title}</h3>
@@ -442,7 +442,7 @@ function displaySportsData(){
     for (let i = 0; i < allSports.length; i++) {
         x+=`<div class="product-page-card">
                 <div class="product-page-card-img">
-                   <a href="https://john1909m.github.io/E-commerce/singleProduct.html?id=${allSports[i].id}"> <img src="${allSports[i].thumbnail}" alt=""></a>
+                   <a href="https://e-trades.netlify.app/singleProduct.html?id=${allSports[i].id}"> <img src="${allSports[i].thumbnail}" alt=""></a>
                 </div>
                 <div class="product-page-card-title">
                     <h3>${allSports[i].title}</h3>
@@ -470,7 +470,7 @@ function displayGroceryData(){
     for (let i = 0; i < allGrocery.length; i++) {
         x+=`<div class="product-page-card">
                 <div class="product-page-card-img">
-                   <a href="https://john1909m.github.io/E-commerce/singleProduct.html?id=${allGrocery[i].id}"> <img src="${allGrocery[i].thumbnail}" alt=""></a>
+                   <a href="https://e-trades.netlify.app/singleProduct.html?id=${allGrocery[i].id}"> <img src="${allGrocery[i].thumbnail}" alt=""></a>
                 </div>
                 <div class="product-page-card-title">
                     <h3>${allGrocery[i].title}</h3>
@@ -506,7 +506,7 @@ if(document.getElementById("title").innerHTML=="Products"){
     
 }
 homePage.addEventListener("click",function(e){
-    navigate="https://john1909m.github.io/E-commerce/"
+    navigate="https://e-trades.netlify.app/"
     localStorage.setItem("navigate",navigate)
     e.preventDefault();   
     window.location.href="loading.html"
@@ -524,7 +524,7 @@ contactUsPage.addEventListener("click",function(e){
     window.location.href="loading.html"
 })
 homePageMenu.addEventListener("click",function(e){
-    navigate="https://john1909m.github.io/E-commerce/"
+    navigate="https://e-trades.netlify.app/"
     localStorage.setItem("navigate",navigate)
     e.preventDefault();   
     window.location.href="loading.html"
@@ -600,7 +600,7 @@ login.addEventListener("click",function(e){
     window.location.href="loading.html"
 })
 logo.addEventListener("click",function(e){
-    navigate="https://john1909m.github.io/E-commerce/"
+    navigate="https://e-trades.netlify.app/"
     localStorage.setItem("navigate",navigate)
     e.preventDefault();  
     window.location.href="loading.html"
