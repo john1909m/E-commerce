@@ -215,34 +215,34 @@ function displayShoes(){
 
 
 document.getElementById("phones-category").addEventListener("click",function(){
-    window.location.href=`http://127.0.0.1:5501/Products.html?cat=${phoneData.products[0].category}`
+    window.location.href=`https://e-trades.netlify.app/Products.html?cat=${phoneData.products[0].category}`
 })
 document.getElementById("laptops-category").addEventListener("click",function(){
-    window.location.href=`http://127.0.0.1:5501/Products.html?cat=${laptopData[0].category}`
+    window.location.href=`https://e-trades.netlify.app/Products.html?cat=${laptopData[0].category}`
 })
 document.getElementById("watches-category").addEventListener("click",function(){
-    window.location.href=`http://127.0.0.1:5501/Products.html?cat=${watchData.products[0].category}`
+    window.location.href=`https://e-trades.netlify.app/Products.html?cat=${watchData.products[0].category}`
 })
 document.getElementById("clothes-category").addEventListener("click",function(){
-    window.location.href=`http://127.0.0.1:5501/Products.html?cat=${clothesData.products[0].category}`
+    window.location.href=`https://e-trades.netlify.app/Products.html?cat=${clothesData.products[0].category}`
 })
 document.getElementById("shoes-category").addEventListener("click",function(){
-    window.location.href=`http://127.0.0.1:5501/Products.html?cat=${shoesData.products[0].category}`
+    window.location.href=`https://e-trades.netlify.app/Products.html?cat=${shoesData.products[0].category}`
 })
 document.getElementById("furniture-category").addEventListener("click",function(){
-    window.location.href=`http://127.0.0.1:5501/Products.html?cat=${furnitureData.products[0].category}`
+    window.location.href=`https://e-trades.netlify.app/Products.html?cat=${furnitureData.products[0].category}`
 })
 document.getElementById("accessories-category").addEventListener("click",function(){
-    window.location.href=`http://127.0.0.1:5501/Products.html?cat=${accessorieseData.products[0].category}`
+    window.location.href=`https://e-trades.netlify.app/Products.html?cat=${accessorieseData.products[0].category}`
 })
 document.getElementById("beauty-category").addEventListener("click",function(){
-    window.location.href=`http://127.0.0.1:5501/Products.html?cat=${beautyData.products[0].category}`
+    window.location.href=`https://e-trades.netlify.app/Products.html?cat=${beautyData.products[0].category}`
 })
 document.getElementById("sports-category").addEventListener("click",function(){
-    window.location.href=`http://127.0.0.1:5501/Products.html?cat=${sportsData.products[0].category}`
+    window.location.href=`https://e-trades.netlify.app/Products.html?cat=${sportsData.products[0].category}`
 })
 document.getElementById("grocery-category").addEventListener("click",function(){
-    window.location.href=`http://127.0.0.1:5501/Products.html?cat=${groceryData.products[0].category}`
+    window.location.href=`https://e-trades.netlify.app/Products.html?cat=${groceryData.products[0].category}`
 })
 
 if(document.getElementById("title").innerHTML=="Home"){
