@@ -81,7 +81,7 @@ productsPage.addEventListener("click",function(e){
 
 })
 homePage.addEventListener("click",function(e){
-    navigate="Home.html"
+    navigate="https://john1909m.github.io/E-commerce/"
     localStorage.setItem("navigate",navigate)
     e.preventDefault();  
     window.location.href="loading.html"
@@ -104,7 +104,7 @@ productsPageMenu.addEventListener("click",function(e){
 
 })
 homePageMenu.addEventListener("click",function(e){
-    navigate="Home.html"
+    navigate="https://john1909m.github.io/E-commerce/"
     localStorage.setItem("navigate",navigate)
     e.preventDefault();  
     window.location.href="loading.html"
@@ -178,7 +178,22 @@ logout.addEventListener("click",()=>{
     location.reload()
 
 })
+document.getElementById("logout-menu").addEventListener("click",()=>{
+    register.classList.remove("accountTrue")
+    login.classList.remove("accountTrue")
+    account.classList.remove("accountFalse")
+    logout.classList.remove("accountFalse")
+    accountTitle.innerHTML=``
+    localStorage.removeItem("logedIn")
+    location.reload()
 
+})
+logo.addEventListener("click",function(e){
+    navigate="https://john1909m.github.io/E-commerce/"
+    localStorage.setItem("navigate",navigate)
+    e.preventDefault();  
+    window.location.href="loading.html"
+})
 
 
 // for(let i=0;i<allUsers.length;i++){

@@ -82,7 +82,7 @@ productsPage.addEventListener("click",function(e){
 
 })
 homePage.addEventListener("click",function(e){
-    navigate="Home.html"
+    navigate="https://john1909m.github.io/E-commerce/"
     localStorage.setItem("navigate",navigate)
     e.preventDefault();  
     window.location.href="loading.html"
@@ -105,7 +105,7 @@ productsPageMenu.addEventListener("click",function(e){
 
 })
 homePageMenu.addEventListener("click",function(e){
-    navigate="Home.html"
+    navigate="https://john1909m.github.io/E-commerce/"
     localStorage.setItem("navigate",navigate)
     e.preventDefault();  
     window.location.href="loading.html"
@@ -174,7 +174,7 @@ login.addEventListener("click",function(e){
     window.location.href="loading.html"
 })
 logo.addEventListener("click",function(e){
-    navigate="Home.html"
+    navigate="https://john1909m.github.io/E-commerce/"
     localStorage.setItem("navigate",navigate)
     e.preventDefault();  
     window.location.href="loading.html"
