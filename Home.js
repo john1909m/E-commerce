@@ -131,7 +131,7 @@ function displayPhones(){
         x+=`<div class="product-card">
 
         <div class="product-card-img">
-           <a href="http://127.0.0.1:5501/singleProduct.html?id=${phoneData.products[i].id}"> <img src="${phoneData.products[i].thumbnail}" alt=""></a>
+           <a href="https://e-trades.netlify.app/singleProduct.html?id=${phoneData.products[i].id}"> <img src="${phoneData.products[i].thumbnail}" alt=""></a>
         </div>
         <div class="product-card-title">
             <h3>${phoneData.products[i].title}</h3>
@@ -161,7 +161,7 @@ function displaylaptops(){
         x+=`<div class="product-card">
 
         <div class="product-card-img">
-            <a href="http://127.0.0.1:5501/singleProduct.html?id=${laptopData[i].id}"><img src="${laptopData[i].thumbnail}" alt=""></a>
+            <a href="https://e-trades.netlify.app/singleProduct.html?id=${laptopData[i].id}"><img src="${laptopData[i].thumbnail}" alt=""></a>
         </div>
         <div class="product-card-title">
             <h3>${laptopData[i].title}</h3>
