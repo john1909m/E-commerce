@@ -197,6 +197,12 @@
     .product-card{
         width: 20%;
     }
+    .register{
+        display: none;
+    }
+    .nav-icons button:nth-child(1){
+        display: none;
+    }
 }
 @media screen and (max-width:513px){
     .product-cards-slider{
@@ -215,9 +221,9 @@
     .nav-icons{
         width: 60%;
     }
-    .primaryBtn{
+    /* .primaryBtn{
         width: 40%;
-    }
+    } */
     .secondaryBtn{
         width: 25%;
     }
