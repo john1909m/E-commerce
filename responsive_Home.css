@@ -267,6 +267,9 @@
     .product-card h3{
         font-size: 16px;
     }
+    .cat-card h3{
+        font-size: 15px;
+    }
 
 
 }
@@ -287,5 +290,8 @@
     }
     .product-card-body{
         height: 0%;
+    }
+    .cat-card h3{
+        font-size: 15px;
     }
 }
