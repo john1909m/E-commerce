@@ -90,3 +90,8 @@
         height: 15%;
     }
 }
+@media screen and (max-height:600px){
+    .single-product-container{
+        height: 150vh;
+    }
+}
