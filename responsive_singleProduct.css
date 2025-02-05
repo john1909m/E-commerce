@@ -94,4 +94,10 @@
     .single-product-container{
         height: 150vh;
     }
+    .single-product-title{
+        font-size: 16px;
+    }
+    .single-product-des{
+        font-size: 14px;
+    }
 }
