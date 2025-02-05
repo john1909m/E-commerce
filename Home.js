@@ -127,7 +127,7 @@ async function getDataLaptops(){
 function displayPhones(){
     let x=``
 
-    for(let i=0;i<6;i++){
+    for(let i=0;i<5;i++){
         x+=`<div class="product-card">
 
         <div class="product-card-img">
