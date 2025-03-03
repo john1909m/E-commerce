@@ -112,9 +112,7 @@ async function getData(){
         displayAllData()
     }
     else if(cat=="smartphones"){
-        let myHttpPhoneData=await fetch(`https://dummyjson.com/products/category/smartphones`)
-        let phonesObject=await myHttpPhoneData.json()
-        allPhones=phonesObject.products
+        
         // console.log(allPhones);
         displayPhonesData()
     }
@@ -211,7 +209,10 @@ function displayAllData(){
     document.getElementById("all-products-cards").innerHTML=x
 }
 
-function displayPhonesData(){
+async function displayPhonesData(){
+    let myHttpPhoneData=await fetch(`https://dummyjson.com/products/category/smartphones`)
+        let phonesObject=await myHttpPhoneData.json()
+        allPhones=phonesObject.products
     let x=``
 
     for (let i = 0; i < allPhones.length; i++) {
