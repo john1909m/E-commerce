@@ -41,7 +41,7 @@ let accessorieseData=[]
 let beautyData=[]
 let sportsData=[]
 let groceryData=[]
-
+//for dark mode
 if(localStorage.getItem("darkMode")=="darked"){
     document.getElementById("headd").innerHTML=`<meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
