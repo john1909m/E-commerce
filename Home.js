@@ -41,6 +41,7 @@ let accessorieseData=[]
 let beautyData=[]
 let sportsData=[]
 let groceryData=[]
+let search=document.getElementById("search")
 //for dark mode
 if(localStorage.getItem("darkMode")=="darked"){
     document.getElementById("headd").innerHTML=`<meta charset="UTF-8">
@@ -249,6 +250,10 @@ if(document.getElementById("title").innerHTML=="Home"){
     homePage.classList.add("link-active")
     
 }
+search.addEventListener("click",()=>{
+    search.innerHTML=`<input class="search-bar" type="text" placeholder="search">`
+})
+
 productsPage.addEventListener("click",function(e){
     navigate="Products.html"
     localStorage.setItem("navigate",navigate)
