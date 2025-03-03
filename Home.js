@@ -84,6 +84,15 @@ lightBtn.addEventListener("click",()=>{
 
 })
 
+
+document.addEventListener("DOMContentLoaded", () => {
+    const lazyImages = document.querySelectorAll('img[loading="lazy"]');
+    lazyImages.forEach((img) => {
+      img.src = img.dataset.src || img.src;
+    });
+  });
+
+
 getData()
 getDataLaptops()
 // getDataShoes()
@@ -93,29 +102,29 @@ async function getData(){
     displayPhones()
     console.log(phoneData.products[0].category);
 
-    let myHttpWatches=await fetch(`https://dummyjson.com/products/category/mens-watches`)
-    watchData=await myHttpWatches.json()
+    // let myHttpWatches=await fetch(`https://dummyjson.com/products/category/mens-watches`)
+    // watchData=await myHttpWatches.json()
 
-    let myHttpClothes=await fetch(`https://dummyjson.com/products/category/mens-shirts`)
-    clothesData=await myHttpClothes.json()
+    // let myHttpClothes=await fetch(`https://dummyjson.com/products/category/mens-shirts`)
+    // clothesData=await myHttpClothes.json()
 
-    let myHttpShoes=await fetch(`https://dummyjson.com/products/category/mens-shoes`)
-    shoesData=await myHttpShoes.json()
+    // let myHttpShoes=await fetch(`https://dummyjson.com/products/category/mens-shoes`)
+    // shoesData=await myHttpShoes.json()
 
-    let myHttpFurniture=await fetch(`https://dummyjson.com/products/category/furniture`)
-    furnitureData=await myHttpFurniture.json()
+    // let myHttpFurniture=await fetch(`https://dummyjson.com/products/category/furniture`)
+    // furnitureData=await myHttpFurniture.json()
 
-    let myHttpAccessories=await fetch(`https://dummyjson.com/products/category/mobile-accessories`)
-    accessorieseData=await myHttpAccessories.json()
+    // let myHttpAccessories=await fetch(`https://dummyjson.com/products/category/mobile-accessories`)
+    // accessorieseData=await myHttpAccessories.json()
 
-    let myHttpBeauty=await fetch(`https://dummyjson.com/products/category/beauty`)
-    beautyData=await myHttpBeauty.json()
+    // let myHttpBeauty=await fetch(`https://dummyjson.com/products/category/beauty`)
+    // beautyData=await myHttpBeauty.json()
 
-    let myHttpSports=await fetch(`https://dummyjson.com/products/category/sports-accessories`)
-    sportsData=await myHttpSports.json()
+    // let myHttpSports=await fetch(`https://dummyjson.com/products/category/sports-accessories`)
+    // sportsData=await myHttpSports.json()
 
-    let myHttpGrocery=await fetch(`https://dummyjson.com/products/category/groceries`)
-    groceryData=await myHttpGrocery.json()
+    // let myHttpGrocery=await fetch(`https://dummyjson.com/products/category/groceries`)
+    // groceryData=await myHttpGrocery.json()
 
     displayPhones()
 }
@@ -132,7 +141,7 @@ function displayPhones(){
         x+=`<div class="product-card">
 
         <div class="product-card-img">
-           <a href="https://e-trades.netlify.app/singleProduct.html?id=${phoneData.products[i].id}"> <img src="${phoneData.products[i].thumbnail}" alt=""></a>
+           <a href="https://e-trades.netlify.app/singleProduct.html?id=${phoneData.products[i].id}"> <img src="${phoneData.products[i].thumbnail}" alt="" loading="lazy" class="lazy"></a>
         </div>
         <div class="product-card-title">
             <h3>${phoneData.products[i].title}</h3>
@@ -162,7 +171,7 @@ function displaylaptops(){
         x+=`<div class="product-card">
 
         <div class="product-card-img">
-            <a href="https://e-trades.netlify.app/singleProduct.html?id=${laptopData[i].id}"><img src="${laptopData[i].thumbnail}" alt=""></a>
+            <a href="https://e-trades.netlify.app/singleProduct.html?id=${laptopData[i].id}"><img src="${laptopData[i].thumbnail}" alt="" loading="lazy" class="lazy"></a>
         </div>
         <div class="product-card-title">
             <h3>${laptopData[i].title}</h3>
@@ -184,35 +193,35 @@ function displaylaptops(){
     }
     productSlider2.innerHTML=x
 }
-function displayShoes(){
-    let x=``
-    console.log(shoesData.products);
-    for(let i=0;i<shoesData.length;i++){
-        x+=`<div class="product-card">
+// function displayShoes(){
+//     let x=``
+//     console.log(shoesData.products);
+//     for(let i=0;i<shoesData.length;i++){
+//         x+=`<div class="product-card">
 
-        <div class="product-card-img">
-            <img src="${shoesData.products[i].thumbnail}" alt="">
-        </div>
-        <div class="product-card-title">
-            <h3>${shoesData.products[i].title}</h3>
-        </div>
-        <div class="product-card-body">
-            <div class="add-to-cart">
-                <div class="add-to-cart-img">
-                    <img src="assets/cart.png" alt="">
-                </div>
-                <div class="add-to-cart-txt">
-                    <p>Add to cart</p>
-                </div>
-            </div>
-            <div class="product-card-price">
-                <p>${shoesData.products[i].price}</p>
-            </div>
-        </div>
-        </div>`
-    }
-    productSlider2.innerHTML=x
-}
+//         <div class="product-card-img">
+//             <img src="${shoesData.products[i].thumbnail}" alt="" loading="lazy" class="lazy">
+//         </div>
+//         <div class="product-card-title">
+//             <h3>${shoesData.products[i].title}</h3>
+//         </div>
+//         <div class="product-card-body">
+//             <div class="add-to-cart">
+//                 <div class="add-to-cart-img">
+//                     <img src="assets/cart.png" alt="">
+//                 </div>
+//                 <div class="add-to-cart-txt">
+//                     <p>Add to cart</p>
+//                 </div>
+//             </div>
+//             <div class="product-card-price">
+//                 <p>${shoesData.products[i].price}</p>
+//             </div>
+//         </div>
+//         </div>`
+//     }
+//     productSlider2.innerHTML=x
+// }
 
 
 document.getElementById("phones-category").addEventListener("click",function(){
