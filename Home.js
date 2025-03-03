@@ -33,14 +33,6 @@ let navigate
 let allUsers=[]
 let phoneData=[]
 let laptopData=[]
-let shoesData=[]
-let watchData=[]
-let clothesData=[]
-let furnitureData=[]
-let accessorieseData=[]
-let beautyData=[]
-let sportsData=[]
-let groceryData=[]
 let search=document.getElementById("search")
 //for dark mode
 if(localStorage.getItem("darkMode")=="darked"){

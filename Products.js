@@ -89,6 +89,15 @@ lightBtn.addEventListener("click",()=>{
 
 })
 
+
+document.addEventListener("DOMContentLoaded", () => {
+    const lazyImages = document.querySelectorAll('img[loading="lazy"]');
+    lazyImages.forEach((img) => {
+      img.src = img.dataset.src || img.src;
+    });
+  });
+
+
 getData()
 async function getData(){
     let myHttpAllData=await fetch(`https://dummyjson.com/products`)
@@ -96,88 +105,79 @@ async function getData(){
     allProducts=productsObject.products
     // console.log(allProducts);
     
-    let myHttpPhoneData=await fetch(`https://dummyjson.com/products/category/smartphones`)
-    let phonesObject=await myHttpPhoneData.json()
-    allPhones=phonesObject.products
-    // console.log(allPhones);
-    
-    let myHttpLaptopData=await fetch(`https://dummyjson.com/products/category/laptops`)
-    let laptopsObject=await myHttpLaptopData.json()
-    allLaptops=laptopsObject.products
-    console.log(allLaptops);
-    
-
-    let myHttpWatchesData=await fetch(`https://dummyjson.com/products/category/mens-watches`)
-    let watchesObject=await myHttpWatchesData.json()
-    allWatches=watchesObject.products
-
-    let myHttpClothesData=await fetch(`https://dummyjson.com/products/category/mens-shirts`)
-    let clothesObject=await myHttpClothesData.json()
-    allClothes=clothesObject.products
-
-    let myHttpShoesData=await fetch(`https://dummyjson.com/products/category/mens-shoes`)
-    let shoesObject=await myHttpShoesData.json()
-    allShoes=shoesObject.products
-    
-    let myHttpFurnitureData=await fetch(`https://dummyjson.com/products/category/furniture`)
-    let furnitureObject=await myHttpFurnitureData.json()
-    allFurniture=furnitureObject.products
-
-    let myHttpAccessoriesData=await fetch(`https://dummyjson.com/products/category/mobile-accessories`)
-    let accessoriesObject=await myHttpAccessoriesData.json()
-    allAccessories=accessoriesObject.products
-
-    let myHttpBeautyData=await fetch(`https://dummyjson.com/products/category/beauty`)
-    let beautyObject=await myHttpBeautyData.json()
-    allBeauty=beautyObject.products
-
-    let myHttpSportsData=await fetch(`https://dummyjson.com/products/category/sports-accessories`)
-    let sportsObject=await myHttpSportsData.json()
-    allSports=sportsObject.products
-
-    let myHttpGroceryData=await fetch(`https://dummyjson.com/products/category/groceries`)
-    let groceryObject=await myHttpGroceryData.json()
-    allGrocery=groceryObject.products
     
 
     // displayAllData()
-    if(cat=="smartphones"){
+    if(cat==""){
+        displayAllData()
+    }
+    else if(cat=="smartphones"){
+        let myHttpPhoneData=await fetch(`https://dummyjson.com/products/category/smartphones`)
+        let phonesObject=await myHttpPhoneData.json()
+        allPhones=phonesObject.products
+        // console.log(allPhones);
         displayPhonesData()
     }
     else if(cat=="laptops"){
+        let myHttpLaptopData=await fetch(`https://dummyjson.com/products/category/laptops`)
+        let laptopsObject=await myHttpLaptopData.json()
+        allLaptops=laptopsObject.products
+        console.log(allLaptops);
         displayLaptopsData()
-    console.log(allLaptops);
+    
 
     }
     else if(cat=="mens-watches"){
+        let myHttpWatchesData=await fetch(`https://dummyjson.com/products/category/mens-watches`)
+        let watchesObject=await myHttpWatchesData.json()
+        allWatches=watchesObject.products
         displayWatchesData()
         console.log(allWatches);
 
     }
     else if(cat=="mens-shirts"){
+        let myHttpClothesData=await fetch(`https://dummyjson.com/products/category/mens-shirts`)
+        let clothesObject=await myHttpClothesData.json()
+        allClothes=clothesObject.products
         displayClothesData()
     }
     else if(cat=="mens-shoes"){
+        let myHttpShoesData=await fetch(`https://dummyjson.com/products/category/mens-shoes`)
+        let shoesObject=await myHttpShoesData.json()
+        allShoes=shoesObject.products
         displayShoesData()
     }
     else if(cat=="furniture"){
+        let myHttpFurnitureData=await fetch(`https://dummyjson.com/products/category/furniture`)
+        let furnitureObject=await myHttpFurnitureData.json()
+        allFurniture=furnitureObject.products
         displayFurnitureData()
     }
     else if(cat=="mobile-accessories"){
+        let myHttpAccessoriesData=await fetch(`https://dummyjson.com/products/category/mobile-accessories`)
+        let accessoriesObject=await myHttpAccessoriesData.json()
+        allAccessories=accessoriesObject.products
         displayAccessoriesData()
     }
     else if(cat=="beauty"){
+        let myHttpBeautyData=await fetch(`https://dummyjson.com/products/category/beauty`)
+        let beautyObject=await myHttpBeautyData.json()
+        allBeauty=beautyObject.products
         displayBeautyData()
     }
     else if(cat=="sports-accessories"){
+        let myHttpSportsData=await fetch(`https://dummyjson.com/products/category/sports-accessories`)
+        let sportsObject=await myHttpSportsData.json()
+        allSports=sportsObject.products
         displaySportsData()
     }
     else if(cat=="groceries"){
+        let myHttpGroceryData=await fetch(`https://dummyjson.com/products/category/groceries`)
+        let groceryObject=await myHttpGroceryData.json()
+        allGrocery=groceryObject.products
         displayGroceryData()
     }
-    else{
-        displayAllData()
-    }
+
 }
 
 
@@ -188,7 +188,7 @@ function displayAllData(){
     for (let i = 0; i < allProducts.length; i++) {
         x+=`<div class="product-page-card">
                 <div class="product-page-card-img">
-                   <a href="https://e-trades.netlify.app/singleProduct.html?id=${allProducts[i].id}"> <img src="${allProducts[i].thumbnail}" alt=""></a>
+                   <a href="https://e-trades.netlify.app/singleProduct.html?id=${allProducts[i].id}"> <img src="${allProducts[i].thumbnail}" alt="" loading="lazy" class="lazy"></a>
                 </div>
                 <div class="product-page-card-title">
                     <h3>${allProducts[i].title}</h3>
@@ -217,7 +217,7 @@ function displayPhonesData(){
     for (let i = 0; i < allPhones.length; i++) {
         x+=`<div class="product-page-card">
                 <div class="product-page-card-img">
-                   <a href="https://e-trades.netlify.app/singleProduct.html?id=${allPhones[i].id}"> <img src="${allPhones[i].thumbnail}" alt=""></a>
+                   <a href="https://e-trades.netlify.app/singleProduct.html?id=${allPhones[i].id}"> <img src="${allPhones[i].thumbnail}" alt="" loading="lazy" class="lazy"></a>
                 </div>
                 <div class="product-page-card-title">
                     <h3>${allPhones[i].title}</h3>
@@ -246,7 +246,7 @@ function displayLaptopsData(){
     for (let i = 0; i < allLaptops.length; i++) {
         x+=`<div class="product-page-card">
                 <div class="product-page-card-img">
-                   <a href="https://e-trades.netlify.app/singleProduct.html?id=${allLaptops[i].id}"> <img src="${allLaptops[i].thumbnail}" alt=""></a>
+                   <a href="https://e-trades.netlify.app/singleProduct.html?id=${allLaptops[i].id}"> <img src="${allLaptops[i].thumbnail}" alt="" loading="lazy" class="lazy"></a>
                 </div>
                 <div class="product-page-card-title">
                     <h3>${allLaptops[i].title}</h3>
@@ -274,7 +274,7 @@ function displayWatchesData(){
     for (let i = 0; i < allWatches.length; i++) {
         x+=`<div class="product-page-card">
                 <div class="product-page-card-img">
-                   <a href="https://e-trades.netlify.app/singleProduct.html?id=${allWatches[i].id}"> <img src="${allWatches[i].thumbnail}" alt=""></a>
+                   <a href="https://e-trades.netlify.app/singleProduct.html?id=${allWatches[i].id}"> <img src="${allWatches[i].thumbnail}" alt="" loading="lazy" class="lazy"></a>
                 </div>
                 <div class="product-page-card-title">
                     <h3>${allWatches[i].title}</h3>
@@ -302,7 +302,7 @@ function displayClothesData(){
     for (let i = 0; i < allClothes.length; i++) {
         x+=`<div class="product-page-card">
                 <div class="product-page-card-img">
-                   <a href="https://e-trades.netlify.app/singleProduct.html?id=${allClothes[i].id}"> <img src="${allClothes[i].thumbnail}" alt=""></a>
+                   <a href="https://e-trades.netlify.app/singleProduct.html?id=${allClothes[i].id}"> <img src="${allClothes[i].thumbnail}" alt="" loading="lazy" class="lazy"></a>
                 </div>
                 <div class="product-page-card-title">
                     <h3>${allClothes[i].title}</h3>
@@ -330,7 +330,7 @@ function displayShoesData(){
     for (let i = 0; i < allShoes.length; i++) {
         x+=`<div class="product-page-card">
                 <div class="product-page-card-img">
-                   <a href="https://e-trades.netlify.app/singleProduct.html?id=${allShoes[i].id}"> <img src="${allShoes[i].thumbnail}" alt=""></a>
+                   <a href="https://e-trades.netlify.app/singleProduct.html?id=${allShoes[i].id}"> <img src="${allShoes[i].thumbnail}" alt="" loading="lazy" class="lazy"></a>
                 </div>
                 <div class="product-page-card-title">
                     <h3>${allShoes[i].title}</h3>
@@ -358,7 +358,7 @@ function displayFurnitureData(){
     for (let i = 0; i < allFurniture.length; i++) {
         x+=`<div class="product-page-card">
                 <div class="product-page-card-img">
-                   <a href="https://e-trades.netlify.app/singleProduct.html?id=${allFurniture[i].id}"> <img src="${allFurniture[i].thumbnail}" alt=""></a>
+                   <a href="https://e-trades.netlify.app/singleProduct.html?id=${allFurniture[i].id}"> <img src="${allFurniture[i].thumbnail}" alt="" loading="lazy" class="lazy"></a>
                 </div>
                 <div class="product-page-card-title">
                     <h3>${allFurniture[i].title}</h3>
@@ -386,7 +386,7 @@ function displayAccessoriesData(){
     for (let i = 0; i < allAccessories.length; i++) {
         x+=`<div class="product-page-card">
                 <div class="product-page-card-img">
-                   <a href="https://e-trades.netlify.app/singleProduct.html?id=${allAccessories[i].id}"> <img src="${allAccessories[i].thumbnail}" alt=""></a>
+                   <a href="https://e-trades.netlify.app/singleProduct.html?id=${allAccessories[i].id}"> <img src="${allAccessories[i].thumbnail}" alt="" loading="lazy" class="lazy"></a>
                 </div>
                 <div class="product-page-card-title">
                     <h3>${allAccessories[i].title}</h3>
@@ -414,7 +414,7 @@ function displayBeautyData(){
     for (let i = 0; i < allBeauty.length; i++) {
         x+=`<div class="product-page-card">
                 <div class="product-page-card-img">
-                   <a href="https://e-trades.netlify.app/singleProduct.html?id=${allBeauty[i].id}"> <img src="${allBeauty[i].thumbnail}" alt=""></a>
+                   <a href="https://e-trades.netlify.app/singleProduct.html?id=${allBeauty[i].id}"> <img src="${allBeauty[i].thumbnail}" alt=""  loading="lazy" class="lazy"></a>
                 </div>
                 <div class="product-page-card-title">
                     <h3>${allBeauty[i].title}</h3>
@@ -442,7 +442,7 @@ function displaySportsData(){
     for (let i = 0; i < allSports.length; i++) {
         x+=`<div class="product-page-card">
                 <div class="product-page-card-img">
-                   <a href="https://e-trades.netlify.app/singleProduct.html?id=${allSports[i].id}"> <img src="${allSports[i].thumbnail}" alt=""></a>
+                   <a href="https://e-trades.netlify.app/singleProduct.html?id=${allSports[i].id}"> <img src="${allSports[i].thumbnail}" alt="" loading="lazy" class="lazy"></a>
                 </div>
                 <div class="product-page-card-title">
                     <h3>${allSports[i].title}</h3>
@@ -470,7 +470,7 @@ function displayGroceryData(){
     for (let i = 0; i < allGrocery.length; i++) {
         x+=`<div class="product-page-card">
                 <div class="product-page-card-img">
-                   <a href="https://e-trades.netlify.app/singleProduct.html?id=${allGrocery[i].id}"> <img src="${allGrocery[i].thumbnail}" alt=""></a>
+                   <a href="https://e-trades.netlify.app/singleProduct.html?id=${allGrocery[i].id}"> <img src="${allGrocery[i].thumbnail}" alt="" loading="lazy" class="lazy"></a>
                 </div>
                 <div class="product-page-card-title">
                     <h3>${allGrocery[i].title}</h3>
